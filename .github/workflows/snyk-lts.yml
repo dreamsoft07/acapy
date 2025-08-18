@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.repository_owner == 'openwallet-foundation' }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Build a Docker image
       run: docker build  -t acapy-agent -f docker/Dockerfile .

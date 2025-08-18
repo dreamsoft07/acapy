@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     if: (github.event_name == 'pull_request' && github.repository == 'openwallet-foundation/acapy') || (github.event_name != 'pull_request')
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: install
         run: |
           python -m venv env/

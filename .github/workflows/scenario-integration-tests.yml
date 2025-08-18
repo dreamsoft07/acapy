@@ -24,12 +24,12 @@ jobs:
     if: (github.repository == 'openwallet-foundation/acapy') && ((github.event_name == 'pull_request' && github.event.pull_request.draft == false) || (github.event_name != 'pull_request'))
     steps:
       - name: checkout-acapy
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Check changed files
         id: check-changed-files
-        uses: tj-actions/changed-files@v46.0.4
+        uses: tj-actions/changed-files@v46.0.5
         with:
           files_yaml: |
             scenarios: "scenarios/**/*"
