@@ -26,12 +26,12 @@ jobs:
       is_release: ${{ steps.check_if_release.outputs.is_release }}
     steps:
       - name: checkout-acapy
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Check changed files
         id: check-changed-files
-        uses: tj-actions/changed-files@v46.0.4
+        uses: tj-actions/changed-files@v47.0.0
         with:
           files_yaml: |
             src: 
